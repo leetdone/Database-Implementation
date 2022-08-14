@@ -1,0 +1,24 @@
+//
+//  CommandProcessor.cpp
+//  ECEDatabase
+//
+//  Created by rick gessner on 3/30/18.
+//  Copyright © 2018 rick gessner. All rights reserved.
+//
+
+#include <iostream>
+#include <memory>
+#include "CmdProcessor.hpp"
+#include "Statement.hpp"
+
+namespace ECE141 {
+
+CmdProcessor::CmdProcessor(std::ostream &anOutput)
+: output(anOutput){
+}
+
+CmdProcessor* CmdProcessor::recognizes([[maybe_unused]]Tokenizer &aTokenizer) {
+  return nullptr;
+}
+
+}

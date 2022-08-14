@@ -1,0 +1,18 @@
+create database A;
+create database B;
+use B;
+create table Users ( id int NOT NULL auto_increment primary key, first_name varchar(50) NOT NULL, last_name varchar(50), age int, zipcode int);
+create table Books ( id int NOT NULL auto_increment primary key, title varchar(25) NOT NULL, subtitle varchar(25), user_id int);
+INSERT INTO Users (first_name, last_name, age, zipcode) VALUES ("Terry",     "Pratchett", 70,  92124), ("Ian",       "Tregellis", 48,  92123), ("Jody",      "Taylor",    50,  92120), ("Stephen",   "King",      74,  92125), ("Ted",       "Chiang",    56,  92120);
+INSERT INTO Books (title, user_id) VALUES ("The Green Mile",4), ("The Stand",4), ("Misery",4), ("11/22/63",4), ("The Institute",4), ("Sorcerer",1), ("Wintersmith",1), ("Mort",1), ("Thud",1), ("Time Police",3), ("The Mechanical",2), ("The Liberation",2), ("The Rising",2), ("Exhalation",5);
+show indexes;
+drop table Books;
+show indexes;
+use A;
+drop database A;
+use B;
+select * from Users;
+INSERT INTO Users (first_name, last_name, age, zipcode) VALUES ("Isabel", "Reed", 50, 31273),("Cindy", "Brown", 43, 43184),("Carl", "Pham", 41, 62545),("Marie", "He", 47, 88913),("Nicole", "Deng", 35, 37322),("Leo", "Qiu", 30, 41379),("Qing", "Carter", 44, 91192),("Vicki", "Smith", 51, 88715),("Justine", "Wilson", 46, 69903),("Lana", "Morris", 21, 32877),("Stephen", "Morris", 54, 87167),("Ji", "Pham", 55, 67937),("Carl", "Tan", 53, 10115),("Aditya", "Foster", 36, 80991),("Ge", "Brown", 30, 26543),("Mohammed", "Hernandez", 28, 30120),("Nick", "James", 55, 52597),("Serena", "Singh", 28, 86120),("Jen", "Brown", 36, 24350),("Anirudh", "Xu", 50, 82115),("Marie", "Murphy", 23, 86396),("Marie", "Hill", 40, 48782),("Henry", "Huang", 46, 93234),("Henry", "Foster", 43, 21657),("Hanna", "Hernandez", 26, 38529),("Gill", "Singh", 38, 56643),("Ya", "Pham", 55, 17601),("Ya", "Tan", 54, 54011),("Pu", "Hill", 49, 11923),("Nathan", "Deng", 40, 53984);
+DELETE from Users where age>60;
+select * from Users
+INSERT INTO Users (first_name, last_name, age, zipcode) VALUES ("Nathan", "Williams", 21, 86249),("Ji", "Roberts", 23, 25116),("Rick", "Hernandez", 35, 10732),("Rick", "King", 57, 98587),("Carl", "Wade", 49, 20847),("Gill", "Davis", 39, 53148),("Ge", "Martinez", 21, 34141),("Justine", "Tran", 34, 95307),("Truong", "Roberts", 56, 15748),("Serena", "Evans", 26, 60591),("Ji", "King", 50, 93233),("Jen", "Carter", 56, 66626),("Nick", "Williams", 48, 10464),("Jon", "Foster", 26, 15773),("Frank", "Murphy", 54, 76516),("Henry", "Scott", 24, 90061),("David", "Smith", 36, 78685),("Jon", "Young", 21, 55600),("Fae", "Carter", 51, 98575),("Isabel", "Carter", 28, 95036),("Martin", "Park", 28, 76070),("Hanna", "Cooper", 44, 12236),("Anne", "Hong", 20, 70958),("Edward", "Morris", 39, 83314),("Li", "He", 54, 31037),("Trevon", "Davis", 25, 24504),("Rick", "Qiu", 53, 78688),("Marie", "Lee", 21, 66080),("Anirudh", "Harris", 39, 15353),("Rick", "Harris", 39, 72309);

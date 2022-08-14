@@ -1,0 +1,11 @@
+DROP  DATABASE foo;
+CREATE DATABASE foo;
+USE foo;
+CREATE TABLE Users (id int NOT NULL auto_increment primary key, first_name varchar(50) NOT NULL, last_name varchar(50), zipcode INT);
+INSERT INTO Users (first_name, last_name, zipcode) VALUES ("Aurthur C.", "Clarke", 92093);
+CREATE TABLE Books ( id int NOT NULL auto_increment primary key, title varchar(25) NOT NULL, subtitle varchar(25), user_id int);
+INSERT INTO Books (title, subtitle, user_id) VALUES ("love","Maverick",5901), ("happy","promise",5902);
+INSERT INTO Books (title, subtitle, user_id) VALUES ("test1","test2",5900), ("test3","test4",5905);
+
+SELECT * from Users;
+SELECT * from Books;
